@@ -5,7 +5,9 @@ import {
   Body,
   Header,
   Title,
+    Content
 } from 'native-base';
+import Barcode from 'react-native-smart-barcode';
 
 class HomeScreen extends Component {
   render() {
@@ -16,6 +18,10 @@ class HomeScreen extends Component {
             <Title>ProjectX</Title>
           </Body>
         </Header>
+        <Content>
+          <Text>Barcode</Text>
+          <Barcode/>
+        </Content>
       </Container>
     );
   }
