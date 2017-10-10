@@ -2,7 +2,14 @@ package com.projectx;
 import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
+import com.facebook.react.ReactNativeHost;
+import com.facebook.react.ReactPackage;
+import com.facebook.react.shell.MainReactPackage;
+import com.facebook.soloader.SoLoader;
 import com.reactnativecomponent.barcode.RCTCapturePackage;    //import RCTCapturePackage
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends ReactActivity {
 
@@ -19,8 +26,8 @@ public class MainActivity extends ReactActivity {
     protected void onCreate(Bundle savedInstanceState) {
         MainApplication application = (MainApplication) this.getApplication();
         application.setReactNativeHost(new ReactNativeHost(application) {
-            @Override
-            protected boolean getUseDeveloperSupport() {
+            //@Override
+            public boolean getUseDeveloperSupport() {
                 return BuildConfig.DEBUG;
             }
 
@@ -28,7 +35,7 @@ public class MainActivity extends ReactActivity {
             protected List<ReactPackage> getPackages() {
                 return Arrays.<ReactPackage>asList(
                         new MainReactPackage(),
-                        new RCTCapturePackage(MainActivity.this)    //register Module
+                        new RCTCapturePackage()    //register Module
                 );
             }
 
