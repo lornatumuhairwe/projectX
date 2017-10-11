@@ -4,20 +4,18 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Container } from 'native-base';
 import { AppRegistry } from 'react-native';
 
 import HomeScreen from './src/home/components/HomeScreen';
 
-export default class projectX extends Component {
-  render() {
-    return (
-      <Container>
-        <HomeScreen />
-      </Container>
-   );
-  }
+function projectX() {
+  return (
+    <Container>
+      <HomeScreen />
+    </Container>
+  );
 }
 
 AppRegistry.registerComponent('projectX', () => projectX);

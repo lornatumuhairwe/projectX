@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
 import {
   Container,
   Body,
@@ -22,4 +21,3 @@ class HomeScreen extends Component {
 }
 
 export default HomeScreen;
-
