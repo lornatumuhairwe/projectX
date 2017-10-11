@@ -1,7 +1,6 @@
 package com.projectx;
 
 import android.app.Application;
-
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+  private ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
@@ -26,6 +25,10 @@ public class MainApplication extends Application implements ReactApplication {
       );
     }
   };
+
+  public void setReactNativeHost(ReactNativeHost reactNativeHost) {
+      mReactNativeHost = reactNativeHost;
+    }
 
   @Override
   public ReactNativeHost getReactNativeHost() {
